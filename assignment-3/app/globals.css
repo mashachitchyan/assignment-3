@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Lufga-Light';
+  src: url(./assets/fonts/Lufga-Light.woff) format('woff');
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: 'Lufga-Medium';
+  src: url(./assets/fonts/Lufga-Medium.woff) format('woff');
+  font-weight: bolder;
+}
+
+  :root {
+    --background: #121212;
+    --foreground: #ffffff;
+    --font-family-paragraph: 'Lufga-Light', Helvetica, sans-serif;
+    --font-family-heading: 'Lufga-Medium', Helvetica, sans-serif;
+    --font-family-button: 'Lufga-Medium', Helvetica, sans-serif;
+  }
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Lufga-Light', Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+.bold-font {
+  font-family: var(--font-family-button)
+}
+
+.light-font {
+  font-family: var(--font-family-paragraph);
+}
