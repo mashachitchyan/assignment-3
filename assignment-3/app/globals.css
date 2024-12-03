@@ -91,6 +91,11 @@ body {
   overflow: scroll;
 } */
 
+.review-card {
+  /* background-image: url(/images/Ellipse-black.svg); */
+  border: solid 1px #383838;
+}
+
 .custom-prev button,
 .custom-next button {
   background-color: #E5FB6F; /* Button background */

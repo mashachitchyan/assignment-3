@@ -50,7 +50,7 @@ export default function ReviewCards() {
 
         {reviews.map((review) => (
           <SwiperSlide key={review.id}>
-            <div className="review-card bg-white-10 text-white p-6 rounded-3xl min-h-64 mt-4">
+            <div className="review-card text-white p-6 rounded-3xl min-h-64 mt-8">
               <h3 className="text-xl bold-font pb-4">{review.customer_name}</h3>
               <p>{review.review}</p>
             </div>
