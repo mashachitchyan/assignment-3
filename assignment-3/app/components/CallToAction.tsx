@@ -1,12 +1,12 @@
 import React from 'react'
 import PrimaryButton from './Buttons/PrimaryButton';
 
-interface FinalCtaProps {
+interface CallToAction {
     heroText: string;
     paragraph: string
 }
 
-function FinalCTA({ heroText, paragraph } : FinalCtaProps) {
+function CallToAction({ heroText, paragraph } : CallToAction) {
     return (
         <div className='flex flex-col items-center justify-center w-screen pt-16 pb-8 px-24'>
             <h2 className='text-5xl light-font pb-4 pt-2'>{heroText}</h2>
@@ -16,4 +16,4 @@ function FinalCTA({ heroText, paragraph } : FinalCtaProps) {
     )
 }
 
-export default FinalCTA;
+export default CallToAction;

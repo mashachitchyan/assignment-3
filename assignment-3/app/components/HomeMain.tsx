@@ -5,7 +5,7 @@ import BenefitCard from './BenefitCard'
 import LogoSlider from './LogoSlider'
 import ReviewCards from './ReviewCards'
 import Dashboard from './Dashboard'
-import FinalCTA from './FinalCTA'
+import FinalCTA from './CallToAction'
 
 function HomeMain() {
   return (
