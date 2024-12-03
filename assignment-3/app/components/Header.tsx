@@ -6,13 +6,13 @@ import SecondaryButton from './Buttons/SecondaryButton';
 export default function Header() {
   return (
     <header className="flex justify-between items-center py-6 px-24 w-screen">
-      <Link href="/"><Image src="/images/Logo.svg" alt='logo' width={150} height={50} />
+      <Link href="/home"><Image src="/images/Logo.svg" alt='logo' width={150} height={50} />
       </Link>
       <nav>
         <div className='flex justify-around'>
-          <SecondaryButton label='Features' />
-          <SecondaryButton label='Pricing' />
-          <SecondaryButton label='Support' />
+          <SecondaryButton label='Features' href='/features' />
+          <SecondaryButton label='Pricing' href='/pricing'/>
+          <SecondaryButton label='Support' href='/support'/>
           <PrimaryButton label='Request access' />
         </div>
       </nav>
