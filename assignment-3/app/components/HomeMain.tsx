@@ -2,6 +2,7 @@
 import React from 'react'
 import Hero from './Hero'
 import BenefitCard from './BenefitCard'
+import LogoSlider from './LogoSlider'
 
 function HomeMain() {
   return (
@@ -19,11 +20,12 @@ function HomeMain() {
       </div>
       <div className='py-16 text-center w-screen'>
         <p className='text-2xl'>Easy integration with various platforms:</p>
-        <div className='grid'>
+        <div>
+          <LogoSlider />
         </div>
       </div>
     </div>
   )
 }
 
-export default HomeMain
+export default HomeMain;

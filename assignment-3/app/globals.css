@@ -14,13 +14,13 @@
   font-weight: bolder;
 }
 
-  :root {
-    --background: #121212;
-    --foreground: #ffffff;
-    --font-family-paragraph: 'LufgaLight', Helvetica, sans-serif;
-    --font-family-heading: 'LufgaMedium', Helvetica, sans-serif;
-    --font-family-button: 'LufgaMedium', Helvetica, sans-serif;
-  }
+:root {
+  --background: #121212;
+  --foreground: #ffffff;
+  --font-family-paragraph: 'LufgaLight', Helvetica, sans-serif;
+  --font-family-heading: 'LufgaMedium', Helvetica, sans-serif;
+  --font-family-button: 'LufgaMedium', Helvetica, sans-serif;
+}
 
 body {
   color: var(--foreground);
@@ -37,4 +37,46 @@ body {
 
 .light-font {
   font-family: var(--font-family-paragraph);
+}
+
+
+.logo-slider {
+  height: 10vh;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  width: 82%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(250px*24);
+  animation: scroll 140s linear infinite;
+  gap: 4rem;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px*9));
+  }
+}
+
+.slider {
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
 }

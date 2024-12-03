@@ -14,9 +14,9 @@ const Hero = ({ title, heroText, paragraph }: HeroProps) => {
         <p className='text-s text-lime uppercase bold-font'>{title}</p>
         <h2 className='text-5xl light-font pb-4 pt-2'>{heroText}</h2>
         <p className='text-lg pb-4'>{paragraph}</p>
-        <PrimaryButton label='Request early access' />
+        <PrimaryButton label='Get early access' />
     </div>
   )
 }
 
-export default Hero
+export default Hero;
