@@ -9,7 +9,7 @@ interface BenefitCardProps {
 
 const BenefitCard = ({ heading, number, description, variant }: BenefitCardProps) => {
 
-    const baseClasses = 'flex gap-4';
+    const baseClasses = 'flex gap-2';
     const verticalClasses = 'flex flex-col gap-1';
     const defaultClasses = 'flex items-center';
 
@@ -18,7 +18,7 @@ const BenefitCard = ({ heading, number, description, variant }: BenefitCardProps
             <h4 className='text-lg bold-font pb-4'>{heading}</h4>
             <div className={`${baseClasses} ${variant === 'vertical' ? verticalClasses : defaultClasses}`}>
                 <p className='text-3xl text-lime bold-font'>{number}</p>
-                <p className='text-light-grey bold-font'>{description}</p>
+                <p className='text-light-grey light-font'>{description}</p>
             </div>
         </div>
     )

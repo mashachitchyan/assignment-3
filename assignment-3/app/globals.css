@@ -29,6 +29,9 @@ body {
   margin: 0;
   padding: 0;
   width: 100vw;
+  background-image: url('/images/bg-logo.svg');
+  background-repeat: no-repeat;
+  background-position: top;
 }
 
 .bold-font {
@@ -81,7 +84,7 @@ body {
   opacity: 0.6;
 }
 
-.review-container {
+/* .review-container {
   display: flex;
   justify-content: center;
   width: fit-content;
@@ -89,4 +92,19 @@ body {
   padding: 112px;
   overflow-x: auto;
   overflow: scroll;
+} */
+
+.custom-prev button,
+.custom-next button {
+  background-color: #E5FB6F; /* Button background */
+  padding: 1rem 1.15rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
 }
+
+.custom-prev button:hover,
+.custom-next button:hover {
+  background-color: #F4FFB8;
+}
+

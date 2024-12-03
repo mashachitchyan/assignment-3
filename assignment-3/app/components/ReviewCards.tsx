@@ -2,7 +2,12 @@
 
 import { useEffect, useState } from 'react';
 import { supabase } from '../supabaseClient';
-
+import { Swiper } from 'swiper/react';
+import { SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Navigation, Pagination } from 'swiper/modules'; // Import Swiper modules
 interface Review {
   id: string;
   customer_name: string;
@@ -21,7 +26,7 @@ export default function ReviewCards() {
       if (error) {
         console.error('Error fetching reviews:', error.message || error);
       } else {
-        console.log('Fetched reviews:', data);  // Add this line
+        console.log('Fetched reviews:', data);
         setReviews(data || []);
       }
     };
@@ -30,17 +35,37 @@ export default function ReviewCards() {
   }, []);
 
   return (
-    <div className='py-16 text-center w-screen'>
-      <p className='text-2xl'>Reviews from first users</p>
-      <div className='flex justify-center gap-4 px-24 py-8'>
-        {reviews.map((review) => (
-          <div key={review.id} className="review-card bg-white-10 text-white p-6 rounded-3xl">
-            <h3 className='text-xl bold-font pb-4'>{review.customer_name}</h3>
-            <p>{review.review}</p>
-          </div>
-        ))}
-      </div>
-    </div>
+    <div className="p-16 text-center w-screen">
+      <p className="text-2xl">Reviews from first users</p>
+      <Swiper
+        modules={[Navigation, Pagination]}
+        slidesPerView={3}
+        spaceBetween={30}
+        navigation={{
+          nextEl: '.custom-next',
+          prevEl: '.custom-prev',
+        }}
+      >
 
+        {reviews.map((review) => (
+          <SwiperSlide key={review.id}>
+            <div className="review-card bg-white-10 text-white p-6 rounded-3xl min-h-64 mt-4">
+              <h3 className="text-xl bold-font pb-4">{review.customer_name}</h3>
+              <p>{review.review}</p>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      <div className='flex gap-4 m-auto justify-center pt-4'>
+      <div className="custom-prev">
+        <button><img src='/images/Arrow-left.svg'></img></button>
+      </div>
+      <div className="custom-next">
+      <button><img src='/images/Arrow-right.svg'></img></button>
+      </div>
+      </div>
+     
+    </div>
   );
 }

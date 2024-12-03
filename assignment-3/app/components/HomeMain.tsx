@@ -44,7 +44,7 @@ function HomeMain() {
         <LogoSlider />
         <Dashboard />
         <ReviewCards />
-        <FinalCTA heroText='Build Stronger Connections, Faster' paragraph='The product will officially launch in March, 2025. Enjoy exclusive early access now'/>
+        <FinalCTA heroText='Build Stronger Connections, Faster' paragraph='The product will officially launch in March, 2025. Enjoy exclusive early access now!'/>
       </div>
     </div>
   )
