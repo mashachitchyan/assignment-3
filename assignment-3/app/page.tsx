@@ -7,8 +7,6 @@ export default function Home() {
     <div>
       <Header />
       <HomeMain/>
-      <ReviewCards/>
-
     </div>
   );
 }

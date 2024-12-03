@@ -1,0 +1,19 @@
+import React from 'react'
+import PrimaryButton from './Buttons/PrimaryButton';
+
+interface FinalCtaProps {
+    heroText: string;
+    paragraph: string
+}
+
+function FinalCTA({ heroText, paragraph } : FinalCtaProps) {
+    return (
+        <div className='flex flex-col items-center justify-center w-screen pt-16 pb-8 px-24'>
+            <h2 className='text-5xl light-font pb-4 pt-2'>{heroText}</h2>
+            <p className='text-lg pb-4'>{paragraph}</p>
+            <PrimaryButton label='Get early access' />
+        </div>
+    )
+}
+
+export default FinalCTA;

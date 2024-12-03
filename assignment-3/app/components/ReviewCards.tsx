@@ -34,7 +34,7 @@ export default function ReviewCards() {
       <p className='text-2xl'>Reviews from first users</p>
       <div className='flex justify-center gap-4 px-24 py-8'>
         {reviews.map((review) => (
-          <div key={review.id} className="review-card bg-white-30 text-white p-6 rounded-3xl">
+          <div key={review.id} className="review-card bg-white-10 text-white p-6 rounded-3xl">
             <h3 className='text-xl bold-font pb-4'>{review.customer_name}</h3>
             <p>{review.review}</p>
           </div>
