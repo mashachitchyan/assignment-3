@@ -35,7 +35,7 @@ const AccordionItem = ({ title, children }: AccordionProps) => {
                     </svg>
                 </button>
             </h2>
-            {isOpen && <div className="px-10 py-6  rounded-b-3xl border border-dark-grey">{children}</div>}
+            {isOpen && <div className="px-10 py-6 rounded-b-3xl border-t-0 border border-dark-grey">{children}</div>}
         </div>
     );
 };
