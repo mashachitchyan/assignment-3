@@ -14,7 +14,7 @@ const BenefitCard = ({ heading, number, description, variant }: BenefitCardProps
     const defaultClasses = 'flex items-center';
 
     return (
-        <div className='bg-off-black rounded-3xl p-4 border-dark-grey border flex flex-col justify-between text-left p-6'>
+        <div className='bg-off-black rounded-3xl border-dark-grey border flex flex-col justify-between text-left p-6'>
             <h4 className='text-lg bold-font pb-4'>{heading}</h4>
             <div className={`${baseClasses} ${variant === 'vertical' ? verticalClasses : defaultClasses}`}>
                 <p className='text-3xl text-lime bold-font'>{number}</p>

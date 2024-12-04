@@ -5,7 +5,7 @@ import SecondaryButton from './Buttons/SecondaryButton';
 
 export default function Header() {
   return (
-    <header className="flex justify-between items-center py-6 px-24 w-screen">
+    <header className="flex justify-between items-center py-6 xl:px-24 2xl:px-64 w-screen">
       <Link href="/"><Image src="/images/Logo.svg" alt='logo' width={150} height={50} />
       </Link>
       <nav>

@@ -11,7 +11,7 @@ const AccordionItem = ({ title, children }: AccordionProps) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className='flex-col justify-between items-center px-24 w-screen pb-2'>
+        <div className='flex-col justify-between items-center px-24 2xl:w-1/2 2xl:m-auto w-screen pb-2'>
             <h2>
                 <button
                     type="button"

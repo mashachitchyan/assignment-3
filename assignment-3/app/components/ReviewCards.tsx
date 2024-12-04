@@ -36,7 +36,7 @@ export default function ReviewCards() {
   }, []);
 
   return (
-    <div className="p-16 text-center w-screen">
+    <div className="px-24 2xl:px-64 text-center w-screen pt-16">
       <p className="text-2xl">Reviews from first users</p>
       <Swiper
         modules={[Navigation, Pagination]}

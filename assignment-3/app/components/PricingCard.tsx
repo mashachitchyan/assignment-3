@@ -4,12 +4,12 @@ import CallToAction from "./CallToAction";
 
 function PricingCard() {
     return (
-        <div>
-            <div className="flex-col text-center pt-2">
+        <div className="2xl:h-[100vh]">
+            <div className="flex-col text-center pt-2 2xl:pt-0">
             <p className='text-s text-lime uppercase bold-font'>Pricing</p>
             <h2 className='text-3xl light-font pb-4 pt-2'>Pricing made simple, tailored for you</h2>
             </div>
-            <div className="flex gap-4 items-center justify-center h-[80vh]">
+            <div className="flex gap-4 items-center justify-center h-[80vh] 2xl:h-[40vh]">
                 <div className="flex flex-col p-6 max-w-lg text-center bg-white-10 rounded-3xl border border-dark-grey">
                     <h3 className="mb-4 text-2xl text-lime bold-font">Starter</h3>
                     <p className="font-light text-white sm:text-lg ">Best option for personal use or for smaller scale projects</p>
