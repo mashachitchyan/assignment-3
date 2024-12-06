@@ -28,7 +28,8 @@ body {
   font-family: 'LufgaLight', Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  width: 100vw;
+  width: 100%;
+  overflow: hidden;
 }
 
 .bold-font {
@@ -109,4 +110,5 @@ body {
 .custom-next button:hover {
   background-color: #F4FFB8;
 }
+
 

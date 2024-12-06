@@ -9,12 +9,12 @@ function PricingCard() {
             <p className='text-s text-lime uppercase bold-font'>Pricing</p>
             <h2 className='text-3xl light-font pb-4 pt-2'>Pricing made simple, tailored for you</h2>
             </div>
-            <div className="flex gap-4 items-center justify-center h-[80vh] 2xl:h-[40vh]">
+            <div className="flex gap-4 items-center justify-center 2xl:h-[40vh] 2xl:px-80 xl:px-24 lg:px-16 md:px-12 sm:px-12">
                 <div className="flex flex-col p-6 max-w-lg text-center bg-white-10 rounded-3xl border border-dark-grey">
-                    <h3 className="mb-4 text-2xl text-lime bold-font">Starter</h3>
+                    <h3 className="mb-4 2xl:text-2xl md:text-xl sm:text-xl text-lime bold-font">Starter</h3>
                     <p className="font-light text-white sm:text-lg ">Best option for personal use or for smaller scale projects</p>
                     <div className="flex justify-center items-baseline my-8">
-                        <span className="mr-2 text-5xl text-lime font-extrabold">$29</span>
+                        <span className="mr-2 2xl:text-5xl xl:text-5xl lg:text-5xl md:text-4xl sm:text-4xl text-lime font-extrabold">$29</span>
                         <span className="text-gray-500">/month</span>
                     </div>
 
@@ -45,10 +45,10 @@ function PricingCard() {
 
 
                 <div className="flex flex-col p-6 max-w-lg text-center text-black bg-lime-hover rounded-3xl bg-[url('/images/Ellipse.svg')]">
-                    <h3 className="mb-4 text-2xl bold-font">Company</h3>
+                    <h3 className="mb-4 2xl:text-2xl md:text-xl sm:text-xl bold-font">Company</h3>
                     <p className="font-light text-dark-gray sm:text-lg ">Relevant for multiple users, extended & premium support.</p>
                     <div className="flex justify-center items-baseline my-8">
-                        <span className="mr-2 text-5xl font-extrabold">$99</span>
+                        <span className="mr-2 2xl:text-5xl xl:text-5xl lg:text-5xl md:text-4xl sm:text-4xl font-extrabold">$99</span>
                         <span className="text-gray-500">/month</span>
                     </div>
 

@@ -2,7 +2,9 @@ import React from "react";
 
 function LogoSlider() {
     return (
-        <div className="logo-slider">
+        <div>
+            <p className='2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-xl'>Easy integration with various platforms:</p>
+            <div className="logo-slider">
             <div className="slide-track">
                 <div className="slider">
                     <img src="./images/google-analytics.svg" alt="google analytics logo" />
@@ -82,6 +84,7 @@ function LogoSlider() {
                     <img src="./images/stripe.svg" alt="stripe logo" />
                 </div>
             </div>
+        </div>
         </div>
     )
 }

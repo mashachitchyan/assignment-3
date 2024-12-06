@@ -36,8 +36,8 @@ export default function ReviewCards() {
   }, []);
 
   return (
-    <div className="px-24 2xl:px-64 text-center w-screen pt-16">
-      <p className="text-2xl">Reviews from first users</p>
+    <div className="2xl:px-64 xl:px-24 lg:px-16 md:px-12 sm:px-12 text-center w-screen pt-16">
+      <p className="2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-xl">Reviews from first users</p>
       <Swiper
         modules={[Navigation, Pagination]}
         slidesPerView={3}
@@ -46,13 +46,33 @@ export default function ReviewCards() {
           nextEl: '.custom-next',
           prevEl: '.custom-prev',
         }}
+        breakpoints={{
+          1440: {
+            slidesPerView: 3,
+          },
+          1280: {
+            slidesPerView: 3,
+          },
+          1024: { // For screens 1024px and below
+            slidesPerView: 3,
+          },
+          680: {
+            slidesPerView: 2,
+          },
+          425: { // For screens 640px and below
+            slidesPerView: 1,
+          },
+          375: {
+            slidesPerView: 1,
+          }
+        }}
       >
 
         {reviews.map((review) => (
           <SwiperSlide key={review.id}>
-            <div className="review-card text-white p-6 rounded-3xl min-h-64 mt-8">
-              <h3 className="text-xl bold-font pb-4">{review.customer_name}</h3>
-              <p>{review.review}</p>
+            <div className="review-card text-white p-6 rounded-3xl 2xl:min-h-[300px] xl:min-h-[300px] lg:min-h-[300px] md:max-h-[288px] sm:h-fit mt-8">
+              <h3 className="2xl:text-xl xl:text-xl lg-text-xl md:text-lg sm:text-lg bold-font pb-4">{review.customer_name}</h3>
+              <p className="2xl:text-lg xl:text-lg lg-text-lg md:text-base sm:text-base">{review.review}</p>
             </div>
           </SwiperSlide>
         ))}
