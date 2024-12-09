@@ -1,5 +1,4 @@
 import React from "react";
-import PrimaryButton from "./Buttons/PrimaryButton";
 import CallToAction from "./CallToAction";
 
 function PricingCard() {
@@ -44,7 +43,7 @@ function PricingCard() {
                 </div>
 
 
-                <div className="flex flex-col p-6 max-w-lg text-center text-black bg-lime-hover rounded-3xl bg-[url('./images/Ellipse.svg')]">
+                <div className="flex flex-col p-6 max-w-lg text-center text-black bg-lime-hover rounded-3xl">
                     <h3 className="mb-4 2xl:text-2xl md:text-xl sm:text-xl bold-font">Company</h3>
                     <p className="font-light text-dark-gray sm:text-lg ">Relevant for multiple users, extended & premium support.</p>
                     <div className="flex justify-center items-baseline my-8">
