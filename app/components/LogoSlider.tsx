@@ -32,7 +32,6 @@ function LogoSlider() {
                 </div>
 
 
-
                 <div className="slider">
                     <img src="./images/google-analytics.svg" alt="google analytics logo" />
                 </div>
