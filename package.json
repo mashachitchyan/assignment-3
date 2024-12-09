@@ -1,8 +1,11 @@
 {
+  "homepage": "https://masha-chitchyan/github.io/assignment-3-forked",
   "name": "assignment-3",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

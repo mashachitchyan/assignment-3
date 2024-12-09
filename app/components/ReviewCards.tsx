@@ -80,10 +80,10 @@ export default function ReviewCards() {
 
       <div className='flex gap-4 m-auto justify-center pt-4'>
       <div className="custom-prev">
-        <button><img src='/images/Arrow-left.svg'></img></button>
+        <button><img src='./images/Arrow-left.svg'></img></button>
       </div>
       <div className="custom-next">
-      <button><img src='/images/Arrow-right.svg'></img></button>
+      <button><img src='./images/Arrow-right.svg'></img></button>
       </div>
       </div>
      

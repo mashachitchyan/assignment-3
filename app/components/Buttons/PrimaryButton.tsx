@@ -78,7 +78,7 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({ label }) => {
               </>
             ) : (
               <div className="text-gwhite text-xl text-center mb-4">
-                Success! You'll receive the setup instructions shortly. Thank you for being with us!
+                Success! You&apos;ll receive the setup instructions shortly. Thank you for being with us!
               </div>
             )}
 
@@ -86,7 +86,7 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({ label }) => {
               onClick={togglePopup}
               className="flex gap-2 justify-center items-center text-white px-6 py-4 mt-4 rounded-full w-full border border-dark-grey hover:bg-white-10"
             >
-              <img src="/images/X.svg" alt="close" />
+              <img src="./images/X.svg" alt="close" />
               Close
             </button>
           </div>
