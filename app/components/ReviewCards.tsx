@@ -37,7 +37,7 @@ export default function ReviewCards() {
   }, []);
 
   return (
-    <div className="2xl:px-64 xl:px-24 lg:px-16 md:px-12 sm:px-12 text-center w-screen pt-16">
+    <div className="2xl:px-64 xl:px-24 lg:px-16 md:px-12 px-8 text-center w-screen pt-16">
       <p className="2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-xl">Reviews from first users</p>
       <Swiper
         modules={[Navigation, Pagination]}
@@ -54,13 +54,13 @@ export default function ReviewCards() {
           1280: {
             slidesPerView: 3,
           },
-          1024: { // For screens 1024px and below
+          1024: { 
             slidesPerView: 3,
           },
           680: {
             slidesPerView: 2,
           },
-          425: { // For screens 640px and below
+          425: { 
             slidesPerView: 1,
           },
           375: {
@@ -81,10 +81,10 @@ export default function ReviewCards() {
 
       <div className='flex gap-4 m-auto justify-center pt-4'>
       <div className="custom-prev">
-        <button><Image src='./images/Arrow-left.svg' alt='arrow-left'></Image></button>
+        <button><Image src='./images/Arrow-left.svg' alt='arrow-left' height={8} width={8}></Image></button>
       </div>
       <div className="custom-next">
-      <button><Image src='./images/Arrow-right.svg' alt='arrow-right'></Image></button>
+      <button><Image src='./images/Arrow-right.svg' alt='arrow-right' height={8} width={8}></Image></button>
       </div>
       </div>
      

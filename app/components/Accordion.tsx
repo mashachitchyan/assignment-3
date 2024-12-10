@@ -11,16 +11,16 @@ const AccordionItem = ({ title, children }: AccordionProps) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className='flex-col justify-between items-center px-24 2xl:w-1/2 2xl:m-auto w-screen pb-2'>
+        <div className='flex-col justify-between items-center 2xl:px-64 xl:px-24 lg:px-16 md:px-12 px-8 2xl:w-1/2 2xl:m-auto w-screen pb-2'>
             <h2>
                 <button
                     type="button"
                     onClick={() => setIsOpen(!isOpen)}
-                    className={`flex items-center bg-off-black justify-between w-full p-5 text-lg text-white border border-dark-grey ${isOpen ? 'rounded-t-3xl' : 'rounded-3xl'}`}
+                    className={`flex items-center bg-off-black justify-between w-full text-left p-5 text-lg text-white border border-dark-grey ${isOpen ? 'rounded-t-3xl' : 'rounded-3xl'}`}
                 >
                     <span>{title}</span>
                     <svg
-                        className={`w-3 h-3 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+                        className={`w-3 h-3 rotate-180 transition-transform ${isOpen ? 'rotate-0' : ''}`}
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 10 6"

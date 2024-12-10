@@ -61,12 +61,12 @@ function PricingCard() {
   ];
 
   return (
-    <div className="2xl:h-[100vh]">
+    <div className="2xl:h-[100vh] 2xl:px-64 xl:px-24 lg:px-16 md:px-12 px-8">
       <div className="flex-col text-center pt-2 2xl:pt-0">
         <p className="text-s text-lime uppercase bold-font">Pricing</p>
         <h2 className="text-3xl font-light pb-4 pt-2">Pricing made simple, tailored for you</h2>
       </div>
-      <div className="flex flex-col lg:flex-row gap-4 items-center justify-center 2xl:h-[40vh] 2xl:px-80 xl:px-24 lg:px-16 md:px-12 sm:px-12">
+      <div className="flex flex-col lg:flex-row gap-4 items-center justify-center 2xl:h-[40vh] ">
       {pricingOptions.map((option, index) => (
           <PricingCardItem
             key={index}

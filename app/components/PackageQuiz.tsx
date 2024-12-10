@@ -108,7 +108,7 @@ const PackageQuiz = () => {
       {currentStep === -1 && (
         <div className="start-page">
           <p className='2xl:text-lg xl:text-lg lg:text-base md:text-base sm:text-base'>Unsure about which package is best suited for you needs?</p>
-          <h2 className='2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl font-light pb-4 pt-2'>Take a quick quiz and find out!</h2>
+          <h2 className='2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl text-2xl font-light pb-4 pt-2'>Take a quick quiz and find out!</h2>
           <button className="px-6 py-4 bg-lime rounded-full font-weight-bolder text-black hover:bg-lime-hover text-base bold-font" onClick={handleStartQuiz}>Start Quiz</button>
         </div>
       )}
