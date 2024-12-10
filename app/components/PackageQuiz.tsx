@@ -42,12 +42,34 @@ const PackageQuiz = () => {
 
   // Function to calculate package based on the answers
   const calculatePackage = () => {
-    if (usage === 'Professional' || collaboration !== 'Just me' || projects !== '1' || support !== '6') {
-      return 'Premium - $99/month';
-    } else if (usage === 'Personal' && collaboration === 'Just me' && projects === '1' && support === '6') {
+    let score = 0;
+  
+    // Usage scoring
+    if (usage === 'Professional') score += 3;
+    if (usage === 'Personal') score += 1;
+  
+    // Collaboration scoring
+    if (collaboration === '11+') score += 3;
+    if (collaboration === '1-10') score += 2;
+    if (collaboration === 'Just me') score += 1;
+  
+    // Projects scoring
+    if (projects === '6+') score += 3;
+    if (projects === '2-5') score += 2;
+    if (projects === '1') score += 1;
+  
+    // Support scoring
+    if (support === 'Lifetime') score += 3;
+    if (support === '12') score += 2;
+    if (support === '6') score += 1;
+  
+    // Package determination based on total score
+    if (score <= 4) {
       return 'Starter - $29/month';
-    } else {
+    } else if (score <= 7) {
       return 'Professional - $49/month';
+    } else {
+      return 'Premium - $99/month';
     }
   };
 
@@ -93,7 +115,7 @@ const PackageQuiz = () => {
   };
 
   return (
-    <div className='start-page mx-auto mx-24 my-8 px-24 py-8 justify-between text-center border-solid border-2 border-dark-grey box-content rounded-3xl'>
+    <div className='start-page mx-24 px-24 my-8 py-8 justify-between text-center border-solid border-2 border-dark-grey box-content rounded-3xl'>
 
       {currentStep === -1 && (
         <div className="start-page">
