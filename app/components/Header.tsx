@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import PrimaryButton from './Buttons/PrimaryButton';
 import SecondaryButton from './Buttons/SecondaryButton';
 
 export default function Header() {
