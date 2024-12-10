@@ -1,6 +1,4 @@
 import React from "react";
-import CallToAction from "./CallToAction";
-import PackageQuiz from "./PackageQuiz";
 
 interface PricingCardItemProps {
   title: string;
