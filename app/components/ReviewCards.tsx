@@ -8,6 +8,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules'; 
+import Image from 'next/image';
 
 interface Review {
   id: string;
@@ -80,10 +81,10 @@ export default function ReviewCards() {
 
       <div className='flex gap-4 m-auto justify-center pt-4'>
       <div className="custom-prev">
-        <button><img src='./images/Arrow-left.svg'></img></button>
+        <button><Image src='./images/Arrow-left.svg' alt='arrow-left'></Image></button>
       </div>
       <div className="custom-next">
-      <button><img src='./images/Arrow-right.svg'></img></button>
+      <button><Image src='./images/Arrow-right.svg' alt='arrow-right'></Image></button>
       </div>
       </div>
      

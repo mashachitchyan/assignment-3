@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 interface PrimaryButtonProps {
   label: string;
@@ -83,7 +84,7 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({ label }) => {
               </>
             ) : (
               <div>
-                <img className="mx-auto mb-4" src="./images/Checkmark.svg" alt="Checkmark" />
+                <Image className="mx-auto mb-4" src="./images/Checkmark.svg" alt="Checkmark"></Image>
                 <p className="text-gwhite text-xl text-center mb-4">
                   Success! You&apos;ll receive the setup instructions shortly. Thank you for being with us!
                 </p>
@@ -94,7 +95,7 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({ label }) => {
               onClick={togglePopup}
               className="flex gap-2 justify-center items-center text-white px-6 py-4 mt-4 rounded-full w-full border border-dark-grey hover:bg-white-10"
             >
-              <img src="./images/X.svg" alt="close" />
+              <Image src="./images/X.svg" alt="close"></Image>
               Close
             </button>
           </div>
