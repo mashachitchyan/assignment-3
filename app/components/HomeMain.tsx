@@ -11,7 +11,7 @@ function HomeMain() {
   return (
     <div  className='sm:overflow-hidden'>
       <Hero title='Mission' heroText='Turn insights into impact.' paragraph='Leverage real time analytics and detailed reporting to make smarter business decisions.' />
-      <div id='benefits' className='flex-col text-center w-screen py-16 2xl:px-64 xl:px-24 lg:px-16 md:px-12 sm:px-12'>
+      <div id='benefits' className='flex-col text-center w-screen py-16 2xl:px-64 xl:px-24 lg:px-16 md:px-12 px-8'>
         <p className='text-s text-lime uppercase bold-font'>What are the benefits?</p>
         <p className='2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-xl'>All essential tools under one roof</p>
         <div className='grid gap-4 pt-4 2xl:h-[15vh] xl:h-[30vh] lg:h-[fit] md:h-fit sm:h-fit 2xl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1'>
