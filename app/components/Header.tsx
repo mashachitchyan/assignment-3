@@ -3,6 +3,7 @@ import Image from 'next/image';
 import PrimaryButton from './Buttons/PrimaryButton';
 import SecondaryButton from './Buttons/SecondaryButton';
 
+
 export default function Header() {
   return (
     <header className="flex justify-between items-center py-6 w-screen 2xl:px-64 xl:px-24 lg:px-16 md:px-12 sm:px-12">

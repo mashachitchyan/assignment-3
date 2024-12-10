@@ -10,16 +10,21 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({ label }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [email, setEmail] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
+    setErrorMessage('');
   };
 
+
   const handleSubmit = () => {
-    if (email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email && emailRegex.test(email)) {
       setIsSubmitted(true);
+      setErrorMessage('');
     } else {
-      alert('Please enter a valid email.');
+      setErrorMessage('Please enter a valid email address.');
     }
   };
 
@@ -29,7 +34,6 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({ label }) => {
     setEmail('');
   };
 
-  // Disable scrolling when popup is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -66,8 +70,9 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({ label }) => {
                   value={email}
                   onChange={handleEmailChange}
                   placeholder="Your email address"
-                  className="border text-black border-dark-grey bg-white py-4 px-6 rounded-full w-full h-44px mb-4"
+                  className="border text-black border-dark-grey bg-white py-4 px-6 rounded-full w-full h-44px mb-4 focus:border-lime focus:ring-2 focus:ring-lime focus:outline-none"
                 />
+                {errorMessage && <p className="text-lime-hover text-sm mb-4">{errorMessage}</p>}
 
                 <button
                   onClick={handleSubmit}
@@ -77,8 +82,11 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({ label }) => {
                 </button>
               </>
             ) : (
-              <div className="text-gwhite text-xl text-center mb-4">
-                Success! You&apos;ll receive the setup instructions shortly. Thank you for being with us!
+              <div>
+                <img className="mx-auto mb-4" src="./images/Checkmark.svg" alt="Checkmark" />
+                <p className="text-gwhite text-xl text-center mb-4">
+                  Success! You&apos;ll receive the setup instructions shortly. Thank you for being with us!
+                </p>
               </div>
             )}
 
