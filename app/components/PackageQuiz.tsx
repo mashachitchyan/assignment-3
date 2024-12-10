@@ -40,30 +40,24 @@ const PackageQuiz = () => {
     }
   ];
 
-  // Function to calculate package based on the answers
   const calculatePackage = () => {
     let score = 0;
-  
-    // Usage scoring
+
     if (usage === 'Professional') score += 3;
     if (usage === 'Personal') score += 1;
-  
-    // Collaboration scoring
+
     if (collaboration === '11+') score += 3;
     if (collaboration === '1-10') score += 2;
     if (collaboration === 'Just me') score += 1;
-  
-    // Projects scoring
+
     if (projects === '6+') score += 3;
     if (projects === '2-5') score += 2;
     if (projects === '1') score += 1;
-  
-    // Support scoring
+
     if (support === 'Lifetime') score += 3;
     if (support === '12') score += 2;
     if (support === '6') score += 1;
-  
-    // Package determination based on total score
+
     if (score <= 4) {
       return 'Starter - $29/month';
     } else if (score <= 7) {
@@ -73,32 +67,27 @@ const PackageQuiz = () => {
     }
   };
 
-  // Handle the next step (move to the next question)
   const handleNext = () => {
     if (questions[currentStep].state === '') {
       setError('Please select an answer before proceeding.');
       return;
     }
-  
+
     setError('');
-  
+
     if (currentStep === questions.length - 1) {
-      // Calculate the package when reaching the last question
       const result = calculatePackage();
       setPackageResult(result);
       setCurrentStep(currentStep + 1);
     } else {
-      // Move to the next step
       setCurrentStep(currentStep + 1);
     }
   };
 
-  // Handle selection of answers for each question
   const handleSelection = (setter: React.Dispatch<React.SetStateAction<string>>, value: string) => {
     setter(value);
   };
 
-  // Restart the quiz by resetting all states
   const handleRestart = () => {
     setUsage('');
     setCollaboration('');
@@ -109,13 +98,12 @@ const PackageQuiz = () => {
     setError('');
   };
 
-  // Start the quiz
   const handleStartQuiz = () => {
     setCurrentStep(0);
   };
 
   return (
-    <div className='start-page mx-24 px-24 my-8 py-8 justify-between text-center border-solid border-2 border-dark-grey box-content rounded-3xl'>
+    <div className='start-page mx-8 2xl:mx-64 xl:mx-24 lg:mx-16 md:mx-12 px-8 my-8 py-8 justify-between text-center border-solid border-2 border-dark-grey box-content rounded-3xl'>
 
       {currentStep === -1 && (
         <div className="start-page">
@@ -131,19 +119,19 @@ const PackageQuiz = () => {
             <h2 className='2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl font-light pb-4 pt-2'>{questions[currentStep].question}</h2>
             {questions[currentStep].options.map((option) => (
               <label className='flex justify-center items-center w-auto space-x-3 cursor-pointer hover:bg-white-10 p-4 rounded-lg transition-colors' key={option}>
-              <input
-                 type="radio"
-                 name={questions[currentStep].question}
-                 value={option}
-                 onChange={() => handleSelection(questions[currentStep].setter, option)}
-                 checked={questions[currentStep].state === option}
-                 className="appearance-none h-5 w-5 border-2 border-dark-grey rounded-full 
+                <input
+                  type="radio"
+                  name={questions[currentStep].question}
+                  value={option}
+                  onChange={() => handleSelection(questions[currentStep].setter, option)}
+                  checked={questions[currentStep].state === option}
+                  className="appearance-none h-5 w-5 border-2 border-dark-grey rounded-full 
                             checked:bg-lime checked:border-lime checked:hover:bg-lime
                             hover:bg-white-10 hover:border-lime
                             focus:outline-none focus:ring-2 focus:ring-lime"
-              />
-              <span className='text-xl'>{option}</span>
-             </label>
+                />
+                <span className='text-xl'>{option}</span>
+              </label>
             ))}
 
             {error && <p style={{ color: 'red' }}>{error}</p>}
@@ -153,12 +141,12 @@ const PackageQuiz = () => {
             </button>
           </div>
         ) : (
-          // Show result after all questions have been answered
           <div>
-            <h2>Your Selected Package:</h2>
-            <p>{packageResult}</p>
-
-            <button onClick={handleRestart}>Restart Quiz</button>
+            <h2 className='2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl font-light pb-4 pt-2 '>Best Package For You:</h2>
+            <div className="p-8 w-fit m-auto bg-off-black border border-2 border-solid border-dark-grey rounded-3xl">
+              <p className='lg 2xl:text-2xl xl:text-2xl lg:text-xl md:text-lg sm:text-lg text-lime'>{packageResult}</p>
+            </div>
+            <button className='px-8 py-4 rounded-full font-weight-lighter text-white hover:underline text-base light-font' onClick={handleRestart}>Restart Quiz</button>
           </div>
         )
       ) : null}
