@@ -1,6 +1,6 @@
-# Assignment 3
+# Assignment 3 : Complex framework-based website via React
 
-A Next.js project for DESN3035-Assignment 3 showcasing a modern website for a digital product. This project integrates **Supabase** for simple backend functionality (importing user reviews) and **Swiper** for interactive carousels.
+This is a Next.js project showcasing a modern website for a digital product. This project integrates **Supabase** for simple backend functionality (i.e.importing user reviews from database).
 
 ## Table of Contents
 
@@ -81,7 +81,7 @@ npm run build
 npm run deploy 
 ```
 
-3. From the settings tab go to pages and select GitHub Actions as source for build and deployment. Configure through next.js.
+3. From the settings tab go to pages and select GitHub Actions as source for build and deployment. Configure through Next.js.
 
 # Additional Instructions
 ## Setting up Supabase
@@ -118,7 +118,7 @@ npm install swiper
 @import 'swiper/css/pagination';
 ```
 
-3. For more details, visit the [Swiper documentation](https://swiperjs.com).
+3. For more details, visit [Swiper documentation](https://swiperjs.com).
 
 ###
 
