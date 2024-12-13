@@ -15,7 +15,6 @@ export default function Header() {
   return (
     <header className="bg-white border-dark-grey bg-black">
       <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
-        {/* Logo */}
         <Link href="/">
           <Image
             src="./images/Logo.svg"
@@ -26,7 +25,6 @@ export default function Header() {
           />
         </Link>
 
-        {/* Mobile Menu Button */}
         <button
           onClick={toggleMenu}
           data-collapse-toggle="navbar"
@@ -53,7 +51,6 @@ export default function Header() {
           </svg>
         </button>
 
-        {/* Navigation Menu */}
         <nav
           className={`${
             isMenuOpen ? 'block' : 'hidden'
