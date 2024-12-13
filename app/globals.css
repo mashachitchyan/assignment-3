@@ -110,4 +110,7 @@ body {
   background-color: #F4FFB8;
 }
 
+.header {
+  background-color: var(--background);
+}
 

@@ -13,7 +13,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white border-dark-grey bg-black">
+    <header className="bg-white border-dark-grey header">
       <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
         <Link href="/">
           <Image
